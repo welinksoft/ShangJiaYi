@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RKTabView.h"
 
-@interface AddressListViewController : UIViewController
+@interface AddressListViewController : UIViewController<RKTabViewDelegate>
+//顶部显示的tabsView
+@property (nonatomic, strong) IBOutlet RKTabView *titledTabsView;
 
 @end
