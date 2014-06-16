@@ -70,6 +70,16 @@
 		3866A639192DECF4003EBA23 /* FourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3866A637192DECF4003EBA23 /* FourViewController.m */; };
 		3866A63C192DED06003EBA23 /* FiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3866A63B192DED06003EBA23 /* FiveViewController.m */; };
 		3866A63D192DED06003EBA23 /* FiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3866A63B192DED06003EBA23 /* FiveViewController.m */; };
+		388EE3A0194EF41200F13CE6 /* SKSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 388EE399194EF41200F13CE6 /* SKSTableView.m */; };
+		388EE3A1194EF41200F13CE6 /* SKSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 388EE399194EF41200F13CE6 /* SKSTableView.m */; };
+		388EE3A2194EF41200F13CE6 /* SKSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 388EE39B194EF41200F13CE6 /* SKSTableViewCell.m */; };
+		388EE3A3194EF41200F13CE6 /* SKSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 388EE39B194EF41200F13CE6 /* SKSTableViewCell.m */; };
+		388EE3A4194EF41200F13CE6 /* SKSTableViewCellIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 388EE39D194EF41200F13CE6 /* SKSTableViewCellIndicator.m */; };
+		388EE3A5194EF41200F13CE6 /* SKSTableViewCellIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 388EE39D194EF41200F13CE6 /* SKSTableViewCellIndicator.m */; };
+		388EE3A6194EF41200F13CE6 /* expandableImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 388EE39E194EF41200F13CE6 /* expandableImage.png */; };
+		388EE3A7194EF41200F13CE6 /* expandableImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 388EE39E194EF41200F13CE6 /* expandableImage.png */; };
+		388EE3A8194EF41200F13CE6 /* expandableImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 388EE39F194EF41200F13CE6 /* expandableImage@2x.png */; };
+		388EE3A9194EF41200F13CE6 /* expandableImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 388EE39F194EF41200F13CE6 /* expandableImage@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +141,14 @@
 		3866A637192DECF4003EBA23 /* FourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourViewController.m; sourceTree = "<group>"; };
 		3866A63A192DED06003EBA23 /* FiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiveViewController.h; sourceTree = "<group>"; };
 		3866A63B192DED06003EBA23 /* FiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiveViewController.m; sourceTree = "<group>"; };
+		388EE398194EF41200F13CE6 /* SKSTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSTableView.h; sourceTree = "<group>"; };
+		388EE399194EF41200F13CE6 /* SKSTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSTableView.m; sourceTree = "<group>"; };
+		388EE39A194EF41200F13CE6 /* SKSTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSTableViewCell.h; sourceTree = "<group>"; };
+		388EE39B194EF41200F13CE6 /* SKSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSTableViewCell.m; sourceTree = "<group>"; };
+		388EE39C194EF41200F13CE6 /* SKSTableViewCellIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSTableViewCellIndicator.h; sourceTree = "<group>"; };
+		388EE39D194EF41200F13CE6 /* SKSTableViewCellIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSTableViewCellIndicator.m; sourceTree = "<group>"; };
+		388EE39E194EF41200F13CE6 /* expandableImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = expandableImage.png; sourceTree = "<group>"; };
+		388EE39F194EF41200F13CE6 /* expandableImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "expandableImage@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,20 +208,12 @@
 		3866A5BE192DDB4F003EBA23 /* shangjiayi */ = {
 			isa = PBXGroup;
 			children = (
+				388EE396194EF3DB00F13CE6 /* Classes */,
+				388EE395194EF3C800F13CE6 /* Utils */,
 				3866A5F0192DDE84003EBA23 /* Images */,
 				3866A5C7192DDB4F003EBA23 /* AppDelegate.h */,
 				3866A5C8192DDB4F003EBA23 /* AppDelegate.m */,
 				3866A5CA192DDB4F003EBA23 /* Main.storyboard */,
-				3866A5CD192DDB4F003EBA23 /* FirstViewController.h */,
-				3866A5CE192DDB4F003EBA23 /* FirstViewController.m */,
-				3866A5D0192DDB4F003EBA23 /* SecondViewController.h */,
-				3866A5D1192DDB4F003EBA23 /* SecondViewController.m */,
-				3866A632192DECD2003EBA23 /* ThreeViewController.h */,
-				3866A633192DECD2003EBA23 /* ThreeViewController.m */,
-				3866A636192DECF4003EBA23 /* FourViewController.h */,
-				3866A637192DECF4003EBA23 /* FourViewController.m */,
-				3866A63A192DED06003EBA23 /* FiveViewController.h */,
-				3866A63B192DED06003EBA23 /* FiveViewController.m */,
 				3866A5D3192DDB4F003EBA23 /* Images.xcassets */,
 				3866A5BF192DDB4F003EBA23 /* Supporting Files */,
 			);
@@ -281,6 +291,46 @@
 				3866A619192DDFDF003EBA23 /* iphone_main_01_bg.png */,
 			);
 			name = Main;
+			sourceTree = "<group>";
+		};
+		388EE395194EF3C800F13CE6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				388EE397194EF3FC00F13CE6 /* SKSTableViewImp */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		388EE396194EF3DB00F13CE6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3866A5CD192DDB4F003EBA23 /* FirstViewController.h */,
+				3866A5CE192DDB4F003EBA23 /* FirstViewController.m */,
+				3866A5D0192DDB4F003EBA23 /* SecondViewController.h */,
+				3866A5D1192DDB4F003EBA23 /* SecondViewController.m */,
+				3866A632192DECD2003EBA23 /* ThreeViewController.h */,
+				3866A633192DECD2003EBA23 /* ThreeViewController.m */,
+				3866A636192DECF4003EBA23 /* FourViewController.h */,
+				3866A637192DECF4003EBA23 /* FourViewController.m */,
+				3866A63A192DED06003EBA23 /* FiveViewController.h */,
+				3866A63B192DED06003EBA23 /* FiveViewController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		388EE397194EF3FC00F13CE6 /* SKSTableViewImp */ = {
+			isa = PBXGroup;
+			children = (
+				388EE398194EF41200F13CE6 /* SKSTableView.h */,
+				388EE399194EF41200F13CE6 /* SKSTableView.m */,
+				388EE39A194EF41200F13CE6 /* SKSTableViewCell.h */,
+				388EE39B194EF41200F13CE6 /* SKSTableViewCell.m */,
+				388EE39C194EF41200F13CE6 /* SKSTableViewCellIndicator.h */,
+				388EE39D194EF41200F13CE6 /* SKSTableViewCellIndicator.m */,
+				388EE39E194EF41200F13CE6 /* expandableImage.png */,
+				388EE39F194EF41200F13CE6 /* expandableImage@2x.png */,
+			);
+			name = SKSTableViewImp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,8 +414,10 @@
 				3866A624192DDFDF003EBA23 /* iphone_main_02_0106.png in Resources */,
 				3866A630192DEBA4003EBA23 /* nav_bg_ios6s.png in Resources */,
 				3866A606192DDEBF003EBA23 /* main0101gray@2x.png in Resources */,
+				388EE3A6194EF41200F13CE6 /* expandableImage.png in Resources */,
 				3866A604192DDEBF003EBA23 /* main0101white@2x.png in Resources */,
 				3866A626192DDFDF003EBA23 /* iphone_main_02_bg.png in Resources */,
+				388EE3A8194EF41200F13CE6 /* expandableImage@2x.png in Resources */,
 				3866A60E192DDEBF003EBA23 /* main0105gray@2x.png in Resources */,
 				3866A60C192DDEBF003EBA23 /* main0102gray@2x.png in Resources */,
 				3866A62A192DDFDF003EBA23 /* iphone_main_01_bg.png in Resources */,
@@ -392,8 +444,10 @@
 			files = (
 				3866A627192DDFDF003EBA23 /* iphone_main_02_bg.png in Resources */,
 				3866A5FF192DDEBF003EBA23 /* main0103white@2x.png in Resources */,
+				388EE3A9194EF41200F13CE6 /* expandableImage@2x.png in Resources */,
 				3866A603192DDEBF003EBA23 /* main0105white@2x.png in Resources */,
 				3866A631192DEBA4003EBA23 /* nav_bg_ios6s.png in Resources */,
+				388EE3A7194EF41200F13CE6 /* expandableImage.png in Resources */,
 				3866A60B192DDEBF003EBA23 /* main0103gray@2x.png in Resources */,
 				3866A607192DDEBF003EBA23 /* main0101gray@2x.png in Resources */,
 				3866A5FD192DDEBF003EBA23 /* main0104white@2x.png in Resources */,
@@ -427,8 +481,11 @@
 				3866A5C9192DDB4F003EBA23 /* AppDelegate.m in Sources */,
 				3866A5CF192DDB4F003EBA23 /* FirstViewController.m in Sources */,
 				3866A5C5192DDB4F003EBA23 /* main.m in Sources */,
+				388EE3A0194EF41200F13CE6 /* SKSTableView.m in Sources */,
 				3866A634192DECD2003EBA23 /* ThreeViewController.m in Sources */,
+				388EE3A4194EF41200F13CE6 /* SKSTableViewCellIndicator.m in Sources */,
 				3866A63C192DED06003EBA23 /* FiveViewController.m in Sources */,
+				388EE3A2194EF41200F13CE6 /* SKSTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,9 +494,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3866A63D192DED06003EBA23 /* FiveViewController.m in Sources */,
+				388EE3A1194EF41200F13CE6 /* SKSTableView.m in Sources */,
 				3866A639192DECF4003EBA23 /* FourViewController.m in Sources */,
 				3866A5E7192DDB4F003EBA23 /* shangjiayiTests.m in Sources */,
 				3866A635192DECD2003EBA23 /* ThreeViewController.m in Sources */,
+				388EE3A3194EF41200F13CE6 /* SKSTableViewCell.m in Sources */,
+				388EE3A5194EF41200F13CE6 /* SKSTableViewCellIndicator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,6 +696,7 @@
 				3866A5EC192DDB4F003EBA23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3866A5ED192DDB4F003EBA23 /* Build configuration list for PBXNativeTarget "shangjiayiTests" */ = {
 			isa = XCConfigurationList;
@@ -644,6 +705,7 @@
 				3866A5EF192DDB4F003EBA23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

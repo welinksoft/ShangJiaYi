@@ -14,3 +14,7 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+//引入特殊折叠TableView
+#import "SKSTableView.h"
+#import "SKSTableViewCell.h"
