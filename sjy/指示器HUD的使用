@@ -1,0 +1,9 @@
+	//指示器的使用
+    if ([tmp isEqualToString:@"Dismiss"])				[ProgressHUD dismiss];
+	if ([tmp isEqualToString:@"No text"])				[ProgressHUD show:nil];
+	if ([tmp isEqualToString:@"Some text"])				[ProgressHUD show:@"Please wait..."];
+	if ([tmp isEqualToString:@"Long text"])				[ProgressHUD show:@"Please wait. We need some more time to work out this situation."];
+	if ([tmp isEqualToString:@"Success with text"])		[ProgressHUD showSuccess:@"That was great!"];
+	if ([tmp isEqualToString:@"Success without text"])	[ProgressHUD showSuccess:nil];
+	if ([tmp isEqualToString:@"Error with text"])		[ProgressHUD showError:@"Something went wrong."];
+	if ([tmp isEqualToString:@"Error without text"])	[ProgressHUD showError:nil];
