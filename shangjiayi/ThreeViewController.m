@@ -7,6 +7,7 @@
 //
 
 #import "ThreeViewController.h"
+#import "AddressListCellSubTableViewCell.h"
 
 @interface ThreeViewController ()
 
@@ -87,14 +88,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForSubRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"UITableViewCell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    if (!cell)
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    
-    cell.textLabel.text = [NSString stringWithFormat:@"%@", self.contents[indexPath.section][indexPath.row][indexPath.subRow]];
+    static NSString *CellIdentifier = @"AddressListCellSubTableViewCellIdentifier";
+    UINib *nib = [UINib nibWithNibName:@"AddressListCellSubTableViewCell" bundle:nil];
+    [tableView registerNib:nib forCellReuseIdentifier:CellIdentifier];
+    AddressListCellSubTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (!cell){
+        cell = [[AddressListCellSubTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
