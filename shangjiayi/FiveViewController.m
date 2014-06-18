@@ -39,7 +39,7 @@
         if (i == 0) {
             NSMutableArray *infos1 = [[NSMutableArray alloc] init];
             NSMutableDictionary *info1 = [[NSMutableDictionary alloc] init];
-            [info1 setObject:@"setting_vip" forKey:@"image"];
+            [info1 setObject:@"setting_yqhzhb" forKey:@"image"];
             [info1 setObject:@"邀请合作伙伴" forKey:@"title"];
             [info1 setObject:@"3" forKey:@"tag"];
             [infos1 addObject:info1];
@@ -48,13 +48,13 @@
             NSMutableArray *infos2 = [[NSMutableArray alloc] init];
             
             NSMutableDictionary *info1 = [[NSMutableDictionary alloc] init];
-            [info1 setObject:@"setting_clean" forKey:@"image"];
+            [info1 setObject:@"setting_yhgrsz" forKey:@"image"];
             [info1 setObject:@"个人设置" forKey:@"title"];
             [info1 setObject:@"3" forKey:@"tag"];
             [infos2 addObject:info1];
             
             NSMutableDictionary *info2 = [[NSMutableDictionary alloc] init];
-            [info2 setObject:@"setting_share" forKey:@"image"];
+            [info2 setObject:@"setting_yhqysz" forKey:@"image"];
             [info2 setObject:@"企业设置" forKey:@"title"];
             [info2 setObject:@"3" forKey:@"tag"];
             [infos2 addObject:info2];

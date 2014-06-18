@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ThreeViewController : UIViewController<SKSTableViewDelegate>
-//可折叠的TableView
-@property (nonatomic, weak) IBOutlet SKSTableView *tableView;
-//数据
-@property (nonatomic, strong) NSArray *contents;
+@interface ThreeViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+
+//存放数据
+@property (retain,nonatomic) NSMutableDictionary *allListData;//存放的数据
+//存放分类的数据
+@property (retain,nonatomic) NSMutableArray *allListData_for_top;
+//显示数据的tableview
+@property (retain,nonatomic) IBOutlet UITableView *tableView_this;
 
 @end
