@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FiveViewController : UIViewController
+@interface FiveViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+
+//存放数据
+@property (retain,nonatomic) NSMutableArray *allListData;//存放的数据
+//表格
+@property (retain,nonatomic) IBOutlet UITableView *tableView_this;
 
 @end
