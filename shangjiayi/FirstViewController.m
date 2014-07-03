@@ -14,22 +14,20 @@
 
 @implementation FirstViewController
 
+-(void)viewWillAppear:(BOOL)animated{
+    //设置导航栏的文字
+    self.tabBarController.navigationItem.title = @"首页";
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //设置导航栏的颜色
-//    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {//判断版本是否为7.0以上
-//        [_navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bgs.png"] forBarPosition:UIBarPositionTopAttached barMetrics:UIBarMetricsDefault];
-//        [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];//给导航栏返回按钮设置颜色
-//    }else{
-//        [_navigationBar setBackgroundImage: [UIImage imageNamed:@"nav_bg_ios6s.png"] forBarMetrics:UIBarMetricsDefault];
-//    }
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

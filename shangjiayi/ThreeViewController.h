@@ -11,7 +11,7 @@
 @interface ThreeViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
 //存放数据
-@property (retain,nonatomic) NSMutableDictionary *allListData;//存放的数据
+@property (retain,nonatomic) NSMutableDictionary *allListData;
 //存放分类的数据
 @property (retain,nonatomic) NSMutableArray *allListData_for_top;
 //显示数据的tableview

@@ -34,6 +34,11 @@ NSString *const WeAddressListCellSubTableCellIdentifier = @"AddressListCellSubTa
     return self;
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    //设置导航栏的文字
+    self.tabBarController.navigationItem.title = @"通讯录";
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -155,17 +160,17 @@ NSString *const WeAddressListCellSubTableCellIdentifier = @"AddressListCellSubTa
 }
 #pragma mark 显示Tab每个cell的Style
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *WeAddressListCellSubTableCellIdentifier = @"AddressListCellSubTableViewCellIdentifier";
+    static NSString *AddressListCellSubTableCellIdentifier = @"AddressListCellSubTableViewCellIdentifier";
     
     static BOOL nibsRegistered = NO;
     if (!nibsRegistered) {
         UINib *nib = [UINib nibWithNibName:@"AddressListCellSubTableViewCell" bundle:nil];
-        [tableView registerNib:nib forCellReuseIdentifier:WeAddressListCellSubTableCellIdentifier];
+        [tableView registerNib:nib forCellReuseIdentifier:AddressListCellSubTableCellIdentifier];
         nibsRegistered = YES;
     }
     
     
-    AddressListCellSubTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:WeAddressListCellSubTableCellIdentifier];
+    AddressListCellSubTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:AddressListCellSubTableCellIdentifier];
     
     
     return cell;

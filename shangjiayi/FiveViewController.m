@@ -27,6 +27,11 @@
     return self;
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    //设置导航栏的文字
+    self.tabBarController.navigationItem.title = @"设置";
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

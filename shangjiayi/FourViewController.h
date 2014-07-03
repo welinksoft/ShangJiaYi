@@ -10,4 +10,8 @@
 
 @interface FourViewController : UIViewController
 
+//产品库存点击函数
+-(IBAction)product_inventory_buttom_onclick:(id)sender;
+
+
 @end

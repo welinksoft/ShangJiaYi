@@ -1,17 +1,17 @@
 //
-//  SecondViewController.h
+//  Product_CategoryViewController.h
 //  shangjiayi
 //
-//  Created by 帅印 on 14-5-22.
+//  Created by 帅印 on 14-7-3.
 //  Copyright (c) 2014年 welinksoft_Shuaiyin. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface Product_CategoryViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
 //存放数据
-@property (retain,nonatomic) NSMutableDictionary *allListData;//存放的数据
+@property (retain,nonatomic) NSMutableDictionary *allListData;
 //存放分类的数据
 @property (retain,nonatomic) NSMutableArray *allListData_for_top;
 //显示数据的tableview

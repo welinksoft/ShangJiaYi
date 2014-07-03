@@ -1,37 +1,43 @@
 //
-//  SecondViewController.m
+//  Product_CategoryViewController.m
 //  shangjiayi
 //
-//  Created by 帅印 on 14-5-22.
+//  Created by 帅印 on 14-7-3.
 //  Copyright (c) 2014年 welinksoft_Shuaiyin. All rights reserved.
 //
 
-#import "SecondViewController.h"
-#import "ConversationTableViewCell.h"
+#import "Product_CategoryViewController.h"
+#import "Product_Category_TableViewCell.h"
+#import "Product_Category_TableViewTopView.h"
 
 //定义刷新tableCell
-NSString *const WeConversationTableViewCellIdentifier = @"ConversationTableViewCell";
+NSString *const Product_Category_TableViewCellIdentifier = @"Product_Category_TableViewCell";
 
-@interface SecondViewController (){
+@interface Product_CategoryViewController (){
     MJRefreshHeaderView *_header;//下拉刷新
 }
 
 @end
 
-@implementation SecondViewController
+@implementation Product_CategoryViewController
 
 @synthesize allListData;
 @synthesize allListData_for_top;
 @synthesize tableView_this;
 
--(void)viewWillAppear:(BOOL)animated{
-    //设置导航栏的文字
-    self.tabBarController.navigationItem.title = @"会话";
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     //初始化数据源
     self.allListData = [[NSMutableDictionary alloc]init];
     self.allListData_for_top = [[NSMutableArray alloc]init];
@@ -39,13 +45,19 @@ NSString *const WeConversationTableViewCellIdentifier = @"ConversationTableViewC
     //在界面加载的时候加载数据
     //[self.tableView_this registerClass:[AddressListCellSubTableViewCell class] forCellReuseIdentifier:WeAddressListCellSubTableCellIdentifier];
     //[self addHeader];
+    
+    //去掉该死的ios7的分割线
+    if ([self.tableView_this respondsToSelector:@selector(setSeparatorInset:)]) {
+        //[self.tableView setSeparatorInset:UIEdgeInsetsZero];
+        tableView_this.separatorStyle = NO;
+    }
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
+
 //刷新加载的方法
 - (void)addHeader
 {
@@ -118,48 +130,37 @@ NSString *const WeConversationTableViewCellIdentifier = @"ConversationTableViewC
 
 //加载tab
 #pragma mark 显示一共有多少段
-//-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-//    return 5;
-//}
-//#pragma mark 显示Tab的分段自定义View
-//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-//    UIView* customView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
-//    customView.backgroundColor = [UIColor colorWithRed:239.0/255 green:239.0/255 blue:239.0/255 alpha:255];
-//    //加入标题
-//    UILabel *leftLabel = [[UILabel alloc]initWithFrame:CGRectMake(30, 5, 250, 30)];
-//    leftLabel.textColor = [UIColor colorWithRed:100.0/255 green:100.0/255 blue:100.0/255 alpha:255];
-//    leftLabel.font = [UIFont boldSystemFontOfSize:14];
-//    [customView addSubview:leftLabel];
-//    //加入指示图标
-//    UIImageView *umv = [[UIImageView alloc] initWithFrame:CGRectMake(10, 12, 15, 15)];
-//    [umv setImage:[UIImage imageNamed:@"setting_backIcon"]];
-//    [customView addSubview:umv];
-//    
-//    leftLabel.text = @"文沥信息技术有限公司";
-//    
-//    return customView;
-//}
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 5;
+}
+#pragma mark 显示Tab的分段自定义View
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"Product_Category_TableViewTopView" owner:self options:nil];
+    Product_Category_TableViewTopView *customView = [nib objectAtIndex:0];
+    
+    return customView;
+}
 #pragma mark 显示Tab的数据条数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return 5;
 }
 #pragma mark 显示Tab的高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 60.0;
+    return 40.0;
 }
 #pragma mark 显示Tab每个cell的Style
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *ConversationTableViewCellIdentifier = @"ConversationTableViewCellIdentifier";
+    static NSString *Product_Category_TableViewCellIdentifier = @"Product_Category_TableViewCellIdentifier";
     
     static BOOL nibsRegistered = NO;
     if (!nibsRegistered) {
-        UINib *nib = [UINib nibWithNibName:@"ConversationTableViewCell" bundle:nil];
-        [tableView registerNib:nib forCellReuseIdentifier:ConversationTableViewCellIdentifier];
+        UINib *nib = [UINib nibWithNibName:@"Product_Category_TableViewCell" bundle:nil];
+        [tableView registerNib:nib forCellReuseIdentifier:Product_Category_TableViewCellIdentifier];
         nibsRegistered = YES;
     }
     
     
-    ConversationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ConversationTableViewCellIdentifier];
+    Product_Category_TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:Product_Category_TableViewCellIdentifier];
     
     
     return cell;
@@ -170,5 +171,4 @@ NSString *const WeConversationTableViewCellIdentifier = @"ConversationTableViewC
     
     return nil;
 }
-
 @end
